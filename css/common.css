@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 2048px;
+    min-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+}
+
+.gnb {
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+}
+
+.box-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1em 2em;
+    box-sizing: border-box;
+}
+
+.box-header.active {
+    z-index: 2;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+
+.box-header-logo {
+    display: inline-block;
+    float: left;
+    width: 19%;
+}
+
+.box-header-logo .img-logo {
+    width: 112px;
+    height: 23px;
+    background-image: url("/img/ico_recruit_170920.png");
+    background-position: 0 0;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.box-header-logo .img-logo.active {
+    background-position: -120px 0 !important;
+}
+
+.box-header-menu {
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+}
+
+.box-header-etc {
+    display: inline-block;
+    width: 19%;
+}
+
+.box-header-submenu {
+    position: fixed;
+    top: 58px;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    border: none;
+    text-align: center;
+    line-height: 3.5;
+}
+
+.box-header-submenu.active {
+    z-index: 1;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+
+.box-header-menu ul,
+.box-header-etc ul,
+.box-header-submenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.box-header-etc ul {
+    float: right;
+}
+
+.box-header-submenu ul {
+    height: 100%;
+}
+
+.box-header-menu li,
+.box-header-etc li,
+.box-header-submenu li {
+    display: inline;
+    padding-bottom: 0.3em;
+    margin: 0 0.8em;
+}
+
+.box-header-menu li:hover,
+.box-header-etc li:hover,
+.box-header-submenu li:hover {
+    border-bottom: 1px solid #000;
+}
+
+.box-header-menu li a,
+.box-header-etc li button,
+.box-header-submenu li a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+}
+
+.box-header-etc li button {
+    padding: 0;
+    border: none;
+    background: none;
+    font-weight: 400;
+    font-size: 0.75em;
+}
+
+.box-header-menu li a.active,
+.box-header-etc li button.active,
+.box-header-submenu li a.active {
+    color: #000;
+}
+
+.box-modal {
+    display: none;
+}
+
+.box-slide-img-01 {
+    background-color: blueviolet;
+}
