@@ -30,9 +30,9 @@ $(document).ready(function () {
     });
 
     $boxHeader.mouseleave(function (e) {
-        $boxHeader.addClass('active');
-        $imgLogo.addClass('active');
-        $menuList.addClass('active');
+        $boxHeader.removeClass('active');
+        $imgLogo.removeClass('active');
+        $menuList.removeClass('active');
     }).focusout(function () {
         $boxHeader.mouseleave();
     });
@@ -69,5 +69,32 @@ $(document).ready(function () {
     }).focusout(function () {
         $dropdownMenu.mouseleave();
     });
+
+    //box-slide
+    var ltem_width = $('.box-slide > div').outerWidth(true); //슬라이드될 박스 너비값
+    $('.box-slide > div:first').before($('.box-slide > div:last')); //맨 마지막 슬라이드될 박스를 맨 앞으로 이동시켜둠
+    $('.box-slide').css('left', -ltem_width + 'px'); //늘어난 만큼 -로 위치 설정
+
+    $('.btn-prev').click(function () {
+        var left_indent = parseInt($('.box-slide').css('left')) + ltem_width;
+
+        $('.box-slide').animate({'left':left_indent+'px'}, 200, function () {
+            $('.box-slide > div:first').before($('.box-slide > div:last'));
+            // $('.box-slide > div:last').insertBefore($('.box-slide > div:first'));
+            $('.box-slide').css('left', -ltem_width +'px');
+        });
+    });
+
+    $('.btn-next').click(function () {
+        var left_indent = parseInt($('.box-slide').css('left')) - ltem_width;
+
+        $('.box-slide').animate({'left':left_indent+'px'}, 200, function () {
+            $('.box-slide > div:last').after($('.box-slide > div:first'));
+            // $('.box-slide > div:first').insertAfter($('.box-slide > div:last'));
+            $('.box-slide').css('left', -ltem_width +'px');
+        });
+    });
+
+
 
 });
