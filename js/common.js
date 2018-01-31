@@ -100,5 +100,8 @@ $(document).ready(function () {
         });
     });
 
+    //content random img
+    var images = ['img-random-01.gif', 'img-random-02.gif', 'img-random-03.gif', 'img-random-04.gif', 'img-random-05.gif'];
+    $('.box-content-01 .description').html("<img src='/img/" + images[Math.floor(Math.random() * images.length)] + "'>");
 
 });
