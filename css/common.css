@@ -209,13 +209,13 @@ body, h4, h5 {
 }
 
 .box-slide .page {
-    margin: 7em 0 3em 0;
+    /*margin: 7em 0 3em 0;*/
     color: #fff;
     text-align: center;
 }
 
 .box-slide-btn {
-    position:  relative;
+    position: relative;
     bottom: 20em;
     margin: 0 auto;
     width: 95%;
@@ -243,5 +243,70 @@ body, h4, h5 {
     cursor: pointer;
     border: none;
     background-color: transparent;
+}
+
+/*main content box*/
+section.box-content {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    border-bottom: 1px solid #eee;
+}
+
+.box-content-01, .box-content-02, .box-content-03 {
+    flex: 1;
+    width: 33%;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.box-content-01 {
+    background-color: #c2dcfc;
+}
+
+.box-content-02 {
+    background-color: #fff;
+}
+
+.box-content-03 {
+    background-color: #d4d1cc;
+}
+
+.box-content-01 .title,
+.box-content-02 .title,
+.box-content-03 .title {
+    height: 10%;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.box-content-01 .description,
+.box-content-02 .description,
+.box-content-03 .description {
+    padding: 2em;
+    margin: 0;
+    box-sizing: border-box;
+    height: 90%;
+    text-align: center;
+}
+
+.box-content-01 .description img {
+    height: 77%;
+}
+
+.box-content-02 .description {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: -1px;
+    line-height: 1.5em;
+}
+
+.box-content-03 .description {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.5em;
 }
 
