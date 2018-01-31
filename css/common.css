@@ -142,7 +142,7 @@ body, h4, h5 {
     display: none;
 }
 
-/*main*/
+/*main slide box*/
 .box-slide {
     position: relative;
     width: 30000px;
@@ -158,23 +158,33 @@ body, h4, h5 {
 }
 
 .box-slide > div.box-slide-img-01 {
-    background-color: blueviolet;
+    background-image: url("/img/img-slide-01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box-slide > div.box-slide-img-02 {
-    background-color: aqua;
+    background-image: url("/img/img-slide-02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box-slide > div.box-slide-img-03 {
-    background-color: brown;
+    background-image: url("/img/img-slide-03.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box-slide > div.box-slide-img-04 {
-    background-color: chartreuse;
+    background-image: url("/img/img-slide-04.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box-slide > div.box-slide-img-05 {
-    background-color: orange;
+    background-image: url("/img/img-slide-05.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box-slide .box-slide-content {
