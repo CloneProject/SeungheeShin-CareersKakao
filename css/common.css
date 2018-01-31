@@ -145,16 +145,16 @@ body, h4, h5 {
 /*main*/
 .box-slide {
     position: relative;
-    width: 2500px;
+    width: 30000px;
     height: 40em;
 }
 
 .box-slide > div {
-    float: left;
     display: inline-block;
-    padding: 0;
-    width: 100px;
+    float: left;
+    width: auto;
     height: 100%;
+    padding: 0;
 }
 
 .box-slide > div.box-slide-img-01 {
@@ -170,8 +170,68 @@ body, h4, h5 {
 }
 
 .box-slide > div.box-slide-img-04 {
-    background-color: chartreuse;}
+    background-color: chartreuse;
+}
 
 .box-slide > div.box-slide-img-05 {
     background-color: orange;
 }
+
+.box-slide .box-slide-content {
+    margin: 15em 20em 0 10em;
+    cursor: pointer;
+}
+
+.box-slide .box-slide-content .nickname {
+    margin: 1em 0;
+}
+
+.box-slide .box-slide-content .oneword {
+    margin-bottom: 1.3em;
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+.box-slide .box-slide-content .btn-interview {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: gold;
+}
+
+.box-slide .page {
+    margin: 7em 0 3em 0;
+    color: #fff;
+    text-align: center;
+}
+
+.box-slide-btn {
+    position:  relative;
+    bottom: 20em;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.box-slide-btn .btn-prev {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    background-image: url("/img/ico_recruit_170920.png");
+    background-position: 0 -40px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.box-slide-btn .btn-next {
+    float: right;
+    width: 40px;
+    height: 40px;
+    background-image: url(/img/ico_recruit_170920.png);
+    background-position: -40px -40px;
+    text-indent: -9999px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
