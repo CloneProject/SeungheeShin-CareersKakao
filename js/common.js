@@ -68,6 +68,17 @@ $(document).ready(function () {
         $dropdownBg.removeClass('active');
     }).focusout(function () {
         $dropdownMenu.mouseleave();
+
+    //모달 팝업 레이어
+    $('button.menu-05').click(function(event){
+        event.stopPropagation();
+        $('.box-modal').toggle();
+    });
+
+    $(document).click(function(){
+        $('.box-modal').hide();
+    });
+
     });
 
     //box-slide
