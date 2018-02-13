@@ -20,6 +20,13 @@ $(document).ready(function () {
         }
     });
 
+    //스크롤 상태에서 새로고침 시 포커스 효과
+    if ($(window).scrollTop() >= 20) {
+        $boxHeader.addClass('active');
+        $imgLogo.addClass('active');
+        $menuList.addClass('active');
+    }
+
     //상단 메뉴 포커스 효과
     $boxHeader.mouseenter(function (e) {
         $boxHeader.addClass('active');
@@ -30,44 +37,66 @@ $(document).ready(function () {
     });
 
     $boxHeader.mouseleave(function (e) {
-        $boxHeader.removeClass('active');
-        $imgLogo.removeClass('active');
-        $menuList.removeClass('active');
+        if ($(window).scrollTop() >= 20) {
+
+        } else {
+            $boxHeader.removeClass('active');
+            $imgLogo.removeClass('active');
+            $menuList.removeClass('active');
+            $dropdownBg.removeClass('active');
+        }
     }).focusout(function () {
         $boxHeader.mouseleave();
     });
 
-    //상단 메뉴 드롭다운
+    //2단 메뉴 드롭다운
     $dropdownMenu.mouseenter(function (e) {
         $dropdownMenu.stop().animate();
         $dropdownBg.stop().animate({height: 60}, 300);
         $dropdownBg.addClass('active');
     }).focusin(function () {
         $dropdownMenu.mouseenter();
+
     });
 
     $dropdownMenu.mouseleave(function (e) {
         $dropdownMenu.stop().animate();
         $dropdownBg.stop().animate({height: 0}, 300);
-        $dropdownBg.removeClass('active');
+
     }).focusout(function () {
         $dropdownMenu.mouseleave();
+        $dropdownBg.removeClass('active');
+
     });
 
     $dropdownBg.mouseenter(function (e) {
         $dropdownMenu.stop().animate();
         $dropdownBg.stop().animate({height: 60}, 300);
         $dropdownBg.addClass('active');
+        $boxHeader.addClass('active');
+        $imgLogo.addClass('active');
+        $menuList.addClass('active');
+
     }).focusin(function () {
         $dropdownMenu.mouseenter();
+
     });
 
     $dropdownBg.mouseleave(function (e) {
         $dropdownMenu.stop().animate();
         $dropdownBg.stop().animate({height: 0}, 300);
         $dropdownBg.removeClass('active');
+
+        if ($(window).scrollTop() === 0) {
+            $boxHeader.removeClass('active');
+            $imgLogo.removeClass('active');
+            $menuList.removeClass('active');
+
+        }
     }).focusout(function () {
         $dropdownMenu.mouseleave();
+
+    });
 
     //모달 팝업 레이어
     $('button.menu-05').click(function(event){
