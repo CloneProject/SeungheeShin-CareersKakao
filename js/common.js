@@ -79,6 +79,38 @@ $(document).ready(function () {
         $('.box-modal').hide();
     });
 
+    //footer 모달 팝업 레이어-01
+    $('button.btn-relation').click(function(event){
+        event.stopPropagation();
+        $('.box-modal-relationl').toggle();
+
+        if ($(".relation img").hasClass("active") === true) {
+            $(".relation img").removeClass('active');
+        } else {
+            $(".relation img").addClass('active');
+        }
+    });
+
+    $(document).click(function(){
+        $('.box-modal-relationl').hide();
+        $('.relation img').removeClass('active');
+    });
+
+    //footer 모달 팝업 레이어-02
+    $('button.btn-lang').click(function(event){
+        event.stopPropagation();
+        $('.box-modal-lang').toggle();
+
+        if ($(".lang img").hasClass("active") === true) {
+            $(".lang img").removeClass('active');
+        } else {
+            $(".lang img").addClass('active');
+        }
+    });
+
+    $(document).click(function(){
+        $('.box-modal-lang').hide();
+        $('.lang img').removeClass('active');
     });
 
     //box-slide

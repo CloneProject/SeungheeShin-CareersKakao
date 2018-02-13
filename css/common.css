@@ -371,6 +371,7 @@ section.box-content {
 
 /*footer*/
 footer .box-footer {
+    position: relative;
     padding: 1em;
     box-sizing: border-box;
     width: 100%;
@@ -402,6 +403,87 @@ footer .box-footer {
 }
 
 .box-company-etc {
-    display:  inline-block;
-    float:  right;
+    display: inline-block;
+    float: right;
+}
+
+.box-company-etc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.box-company-etc button {
+    padding: 0;
+    border: none;
+    background: none;
+    font-weight: 400;
+    font-size: 0.7em;
+    cursor: pointer;
+}
+
+.box-company-etc button:hover {
+    text-decoration: underline;
+}
+
+.box-company-etc li {
+    display: inline;
+    padding: 0 1em 0.3em 0;
+}
+
+.box-company-etc li:first-child img,
+.box-company-etc li:last-child img {
+    padding-left: 0.3em;
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+}
+
+.box-company-etc li:first-child img.active,
+.box-company-etc li:last-child img.active {
+    transform: rotate(60deg);
+}
+
+/*click modal layer*/
+.box-modal-relationl {
+    display: none;
+    z-index: 100;
+    position: absolute;
+    right: 105px;
+    bottom: 70px;
+    padding: 0.7em;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    background-color: #fff;
+    width: 110px;
+    height: 90px;
+}
+
+.box-modal-lang {
+    display: none;
+    z-index: 100;
+    position: absolute;
+    right: 22px;
+    bottom: 70px;
+    padding: 0.7em;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    background-color: #fff;
+    width: 65px;
+    height: 70px;
+}
+
+.box-modal-relationl ul,
+.box-modal-lang ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.box-modal-relationl a,
+.box-modal-lang a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.7em;
+    color: #000;
 }
