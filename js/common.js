@@ -174,6 +174,13 @@ $(document).ready(function () {
 
     //content random img
     var images = ['img-random-01.gif', 'img-random-02.gif', 'img-random-03.gif', 'img-random-04.gif', 'img-random-05.gif'];
-    $('.box-content-01 .description').html("<img src='/img/" + images[Math.floor(Math.random() * images.length)] + "'>");
+    $('.box-content-01 .description').html("<img src='../img/" + images[Math.floor(Math.random() * images.length)] + "'>");
+
+    var colorList = ['#ffbdbd', '#c2dcfc', '#d4d1cc', '#caf3dc', '#eb6c6c'];
+    $('.box-content-01').css('background-color', colorList[Math.floor(Math.random() * colorList.length)]);
+
+    var textList = ['공개하고<br>공유합니다.', '신뢰하고,<br>충돌하며<br>헌신합니다.', '일에<br>몰입할 수 있는<br>방식은<br>서로 다릅니다.', '다른 부서의<br>일도 우리의<br>일입니다.', '회고합니다.'];
+    $('.box-content-03 .description').html(textList[Math.floor(Math.random() * textList.length)]);
+
 
 });
