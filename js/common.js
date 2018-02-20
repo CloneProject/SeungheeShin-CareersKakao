@@ -61,7 +61,9 @@ $(document).ready(function () {
 
     $dropdownMenu.mouseleave(function (e) {
         $dropdownMenu.stop().animate();
-        $dropdownBg.stop().animate({height: 0}, 300);
+        setTimeout(function () {
+            $dropdownBg.stop().animate({height: 0}, 300);
+        }, 3000);
 
     }).focusout(function () {
         $dropdownMenu.mouseleave();
