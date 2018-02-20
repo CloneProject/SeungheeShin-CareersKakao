@@ -157,17 +157,24 @@ $(document).ready(function () {
     });
 
     //box-slide
-    $('.box-slide > div').css('width', $(window).width());
+    var left_indent = 0;
+    var right_indent = 0;
+    var ltem_width = 0;
+
     $(window).resize(function () { // 이거 왜 작동 안하지?
-        $('.box-slide > div').css('width', $(window).width());
+        boxSlide();
     }).resize();
 
-    var ltem_width = $('.box-slide > div').outerWidth(true); //슬라이드될 박스 너비값
-    $('.box-slide > div:first').before($('.box-slide > div:last')); //맨 마지막 슬라이드될 박스를 맨 앞으로 이동시켜둠
-    $('.box-slide').css('left', -ltem_width + 'px'); //늘어난 만큼 -로 위치 설정
+    function boxSlide() {
+        $('.box-slide > div').css('width', $(window).width());
+        ltem_width = $('.box-slide > div').outerWidth(true); //슬라이드될 박스 너비값
+        $('.box-slide').css('left', -ltem_width + 'px'); //늘어난 만큼 -로 위치 설정
+    }
 
-    $('.btn-prev').click(function () {
-        var left_indent = parseInt($('.box-slide').css('left')) + ltem_width;
+    $('.box-slide > div:first').before($('.box-slide > div:last')); //맨 마지막 슬라이드될 박스를 맨 앞으로 이동시켜둠
+
+    $(document).on("click", ".btn-prev", function () {
+        left_indent = parseInt($('.box-slide').css('left')) + ltem_width;
 
         $('.box-slide').animate({'left': left_indent + 'px'}, 200, function () {
             $('.box-slide > div:first').before($('.box-slide > div:last'));
@@ -176,10 +183,10 @@ $(document).ready(function () {
         });
     });
 
-    $('.btn-next').click(function () {
-        var left_indent = parseInt($('.box-slide').css('left')) - ltem_width;
+    $(document).on("click", ".btn-next", function () {
+        right_indent = parseInt($('.box-slide').css('left')) - ltem_width;
 
-        $('.box-slide').animate({'left': left_indent + 'px'}, 200, function () {
+        $('.box-slide').animate({'left': right_indent + 'px'}, 200, function () {
             $('.box-slide > div:last').after($('.box-slide > div:first'));
             // $('.box-slide > div:first').insertAfter($('.box-slide > div:last'));
             $('.box-slide').css('left', -ltem_width + 'px');
