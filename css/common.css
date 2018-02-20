@@ -343,8 +343,7 @@ section.box-content {
 }
 
 .box-content-01 .description,
-.box-content-02 .description,
-.box-content-03 .description {
+.box-content-02 .description {
     padding: 2em;
     margin: 0;
     box-sizing: border-box;
@@ -369,6 +368,14 @@ section.box-content {
     font-weight: 700;
     letter-spacing: -1px;
     line-height: 1.5em;
+    margin: 0;
+    box-sizing: border-box;
+    height: 90%;
+    text-align: center;
+}
+
+.box-content-03 .description > div {
+    position: relative;
 }
 
 /*footer*/

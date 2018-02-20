@@ -193,8 +193,21 @@ $(document).ready(function () {
     var colorList = ['#ffbdbd', '#c2dcfc', '#d4d1cc', '#caf3dc', '#eb6c6c'];
     $('.box-content-01').css('background-color', colorList[Math.floor(Math.random() * colorList.length)]);
 
-    var textList = ['공개하고<br>공유합니다.', '신뢰하고,<br>충돌하며<br>헌신합니다.', '일에<br>몰입할 수 있는<br>방식은<br>서로 다릅니다.', '다른 부서의<br>일도 우리의<br>일입니다.', '회고합니다.'];
-    $('.box-content-03 .description').html(textList[Math.floor(Math.random() * textList.length)]);
+    var textList = ['<div>공개하고<br>공유합니다.</div>', '<div>신뢰하고,<br>충돌하며<br>헌신합니다.</div>', '<div>일에<br>몰입할 수 있는<br>방식은<br>서로 다릅니다.</div>', '<div>다른 부서의<br>일도 우리의<br>일입니다.</div>', '<div>회고합니다.</div>'];
+    var randomNum = Math.floor(Math.random() * textList.length);
 
+    $('.box-content-03 .description').html(textList[randomNum]);
+
+    if (randomNum === 0) {
+        $('.box-content-03 .description > div').css('top', '30%');
+    } else if (randomNum === 1) {
+        $('.box-content-03 .description > div').css('top', '22%');
+    } else if (randomNum === 2) {
+        $('.box-content-03 .description > div').css('top', '15%');
+    } else if (randomNum === 3) {
+        $('.box-content-03 .description > div').css('top', '22%');
+    } else if (randomNum === 4) {
+        $('.box-content-03 .description > div').css('top', '33%');
+    }
 
 });
