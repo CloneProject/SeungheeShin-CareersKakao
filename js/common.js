@@ -179,7 +179,7 @@ $(document).ready(function () {
         left_indent = parseInt(slideBox.css('left')) + ltem_width;
 
         slideBox.animate({'left': left_indent + 'px'}, 200, function () {
-            boxSlideDivFirst.before(boxSlideDivLast);
+            $('.box-slide > div:first').before($('.box-slide > div:last'));
             // $('.box-slide > div:last').insertBefore($('.box-slide > div:first'));
             slideBox.css('left', -ltem_width + 'px');
         });
@@ -189,7 +189,7 @@ $(document).ready(function () {
         right_indent = parseInt(slideBox.css('left')) - ltem_width;
 
         slideBox.animate({'left': right_indent + 'px'}, 200, function () {
-            boxSlideDivLast.after(boxSlideDivFirst);
+            $('.box-slide > div:last').after($('.box-slide > div:first'));
             // $('.box-slide > div:first').insertAfter($('.box-slide > div:last'));
             slideBox.css('left', -ltem_width + 'px');
         });
