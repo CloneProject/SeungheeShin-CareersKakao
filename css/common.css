@@ -155,8 +155,8 @@ body, h4, h5 {
 
 .box-modal .box-modal-info {
     height: 60%;
-    text-align: center;
     padding: 1em;
+    text-align: center;
     box-sizing: border-box;
 }
 
@@ -188,11 +188,11 @@ body, h4, h5 {
 }
 
 .box-modal-btn button {
-    height: 50%;
-    background-color: #f7f7f7;
-    border: 1px solid #eee;
-    cursor: pointer;
     width: 100%;
+    height: 50%;
+    border: 1px solid #eee;
+    background-color: #f7f7f7;
+    cursor: pointer;
 }
 
 .box-modal-btn button:hover {
@@ -306,12 +306,12 @@ body, h4, h5 {
     float: right;
     width: 40px;
     height: 40px;
+    border: none;
     background-image: url("../img/ico_recruit_170920.png");
     background-position: -40px -40px;
+    background-color: transparent;
     text-indent: -9999px;
     cursor: pointer;
-    border: none;
-    background-color: transparent;
 }
 
 /*main content box*/
@@ -348,10 +348,10 @@ section.box-content {
 
 .box-content-01 .description,
 .box-content-02 .description {
+    height: 90%;
     padding: 2em;
     margin: 0;
     box-sizing: border-box;
-    height: 90%;
     text-align: center;
 }
 
@@ -368,14 +368,14 @@ section.box-content {
 }
 
 .box-content-03 .description {
+    height: 90%;
+    margin: 0;
     font-size: 2em;
     font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
     letter-spacing: -1px;
     line-height: 1.5em;
-    margin: 0;
-    box-sizing: border-box;
-    height: 90%;
-    text-align: center;
 }
 
 .box-content-03 .description > div {
@@ -385,10 +385,10 @@ section.box-content {
 /*footer*/
 footer .box-footer {
     position: relative;
-    padding: 1em;
-    box-sizing: border-box;
     width: 100%;
     height: 5em;
+    padding: 1em;
+    box-sizing: border-box;
 }
 
 .box-company-info {
@@ -421,9 +421,9 @@ footer .box-footer {
 }
 
 .box-company-etc ul {
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .box-company-etc button {
@@ -446,9 +446,9 @@ footer .box-footer {
 
 .box-company-etc li:first-child img,
 .box-company-etc li:last-child img {
-    padding-left: 0.3em;
     height: 15px;
     width: 15px;
+    padding-left: 0.3em;
     vertical-align: middle;
 }
 
@@ -464,12 +464,12 @@ footer .box-footer {
     position: absolute;
     right: 105px;
     bottom: 70px;
-    padding: 0.7em;
-    box-sizing: border-box;
-    border: 1px solid #eee;
-    background-color: #fff;
     width: 110px;
     height: 90px;
+    padding: 0.7em;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-sizing: border-box;
 }
 
 .box-modal-lang {
@@ -478,25 +478,25 @@ footer .box-footer {
     position: absolute;
     right: 22px;
     bottom: 70px;
-    padding: 0.7em;
-    box-sizing: border-box;
-    border: 1px solid #eee;
-    background-color: #fff;
     width: 65px;
     height: 70px;
+    padding: 0.7em;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-sizing: border-box;
 }
 
 .box-modal-relationl ul,
 .box-modal-lang ul {
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .box-modal-relationl a,
 .box-modal-lang a {
-    text-decoration: none;
     font-weight: 400;
     font-size: 0.7em;
     color: #000;
+    text-decoration: none;
 }
